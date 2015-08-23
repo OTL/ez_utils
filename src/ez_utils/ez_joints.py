@@ -36,3 +36,7 @@ class JointsServer(object):
     def set_positions(self, positions):
         self.position_callback(TargetJoints(positions=positions))
 
+
+class EzJoints(JointsServer):
+    def __init__(self, controller_name):
+        super(EzJoints, self).__init__(controller_name)
